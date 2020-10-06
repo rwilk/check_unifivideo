@@ -25,8 +25,8 @@ var args struct {
 	Port          int           `arg:"-p,--port" default:"7080" help:"UVC port"`
 	SSL           bool          `arg:"-s,--ssl" default:"false" help:"use HTTPS instead of HTTP"`
 	APIKey        string        `arg:"-k,--key,required" help:"UVC API Key"`
-	WarningDelay  time.Duration `arg:"-w,--warning" default:"10m" help:"Warning if last recording is older than this value"`
-	CriticalDelay time.Duration `arg:"-c,--critical" default:"30m" help:"Warning if last recording is older than this value"`
+	WarningDelay  time.Duration `arg:"-w,--warning" default:"10m" help:"Warning status if last recording is older than this value"`
+	CriticalDelay time.Duration `arg:"-c,--critical" default:"30m" help:"Critical status if last recording is older than this value"`
 }
 
 func main() {
